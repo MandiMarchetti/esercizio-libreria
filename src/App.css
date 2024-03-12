@@ -27,3 +27,8 @@
     transform: rotate(360deg);
   }
 }
+
+.image-card{
+  width: 18rem;
+  object-fit: cover;
+}

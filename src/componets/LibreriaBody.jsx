@@ -15,15 +15,15 @@ const LibreriaBody = function(){
     return(
         <Container>
             <Row className=''>
-                <Col xs={4}>
+                <Col>
                 <h3>Fantasy Books</h3>
                     <Carousel>
                         {
                             BooksFantasy.map(fantasy => {
                                 return (
                                     <Carousel.Item>
-                                        <Card style={{ width: '18rem' }}>
-                                            <Card.Img variant="top" src={fantasy.img} />
+                                        <Card style={{ width: '15rem'}}>
+                                            <Card.Img className='image-card' variant="top" src={fantasy.img} />
                                             <Card.Body>
                                                 <Card.Title>{fantasy.title}</Card.Title>
                                                 <Card.Text>{fantasy.category}</Card.Text>
@@ -38,15 +38,15 @@ const LibreriaBody = function(){
                     </Carousel>
                 </Col>
 
-                <Col xs={4}>
+                <Col>
                 <h3>History Books</h3>
                     <Carousel>
                         {
                             BooksHistory.map(history => {
                                 return (
                                     <Carousel.Item>
-                                        <Card style={{ width: '18rem' }}>
-                                            <Card.Img variant="top" src={history.img} />
+                                        <Card style={{ width: '15rem' }}>
+                                            <Card.Img className='image-card' variant="top" src={history.img} />
                                             <Card.Body>
                                                 <Card.Title>{history.title}</Card.Title>
                                                 <Card.Text>{history.category}</Card.Text>
@@ -61,15 +61,15 @@ const LibreriaBody = function(){
                     </Carousel>
                 </Col>
 
-                <Col xs={4}>
+                <Col>
                 <h3>Romance Books</h3>
                     <Carousel>
                         {
                             BooksRomance.map(romance => {
                                 return (
                                     <Carousel.Item>
-                                        <Card style={{ width: '18rem' }}>
-                                            <Card.Img variant="top" src={romance.img} />
+                                        <Card style={{ width: '15rem' }}>
+                                            <Card.Img className='image-card' variant="top" src={romance.img} />
                                             <Card.Body>
                                                 <Card.Title>{romance.title}</Card.Title>
                                                 <Card.Text>{romance.category}</Card.Text>

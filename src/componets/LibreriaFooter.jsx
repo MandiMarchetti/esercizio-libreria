@@ -6,8 +6,8 @@ const LibreriaFooter = function(){
     return (
         <footer>
             <Container fluid>
-                <Row className='bg-dark text-white py-5 '>
-                    <Col xs={12}>
+                <Row className='bg-dark text-white py-5'>
+                    <Col xs={12} className='d-flex justify-content-center'>
                         <p>Copyright © 2024 Amy Libreria.</p>
                     </Col>
                 </Row>
