@@ -1,139 +1,38 @@
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import {Carousel, CarouselItem, Container, Row } from 'react-bootstrap';
-import Col from 'react-bootstrap/Col'
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
+import { Carousel, CarouselItem, Container, Row } from "react-bootstrap";
+import Col from "react-bootstrap/Col";
 
 //Listi Jason per i libri
-import BooksFantasy from '../data/fantasy.json'
-import BooksHistory from '../data/history.json'
-import BooksRomance from '../data/romance.json'
-import BooksHorror from '../data/horror.json'
-import BooksScifi from '../data/scifi.json'
+import BooksFantasy from "../data/fantasy.json";
+//import of CSS
+import "../componets/libreria_general.css";
 
+const LibreriaBody = function () {
+  return (
+    <Container>
+      <Row className="mt-2 gy-5">
+        <h3 className="titolo-section">Fantasy Books</h3>
+        {BooksFantasy.map((fantasy) => {
+          return (
+            <Col lg={3}>
+              <Card style={{ height: "25rem" }}>
+                <Card.Img className="h-50 object-fit-cover" variant="top" src={fantasy.img} />
+                <Card.Body>
+                  <Card.Title style={{ overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+                    {fantasy.title}
+                  </Card.Title>
+                  <Card.Text>{fantasy.category}</Card.Text>
+                  <Card.Text>{fantasy.price}</Card.Text>
+                  <Button variant="warning">Buy it Now!</Button>
+                </Card.Body>
+              </Card>
+            </Col>
+          );
+        })}
+      </Row>
+    </Container>
+  );
+};
 
-
-
-const LibreriaBody = function(){
-    return(
-        <Container>
-            <Row className=''>
-                <Col>
-                <h3>Fantasy Books</h3>
-                    <Carousel>
-                        {
-                            BooksFantasy.map(fantasy => {
-                                return (
-                                    <Carousel.Item className='d-flex justify-content-center'>
-                                        <Card className='col-12'>
-                                            <Card.Img className='image-card' variant="top" src={fantasy.img} />
-                                            <Card.Body>
-                                                <Card.Title>{fantasy.title}</Card.Title>
-                                                <Card.Text>{fantasy.category}</Card.Text>
-                                                <Card.Text>{fantasy.price}</Card.Text>
-                                                <Button variant="primary">Buy it Now!</Button>
-                                            </Card.Body>
-                                        </Card>
-                                    </Carousel.Item>
-                                )
-                            })
-                        }
-                    </Carousel>
-                </Col>
-
-                <Col>
-                <h3>History Books</h3>
-                    <Carousel>
-                        {
-                            BooksHistory.map(history => {
-                                return (
-                                    <Carousel.Item className='d-flex justify-content-center'>
-                                        <Card className='col-12'>
-                                            <Card.Img className='image-card' variant="top" src={history.img} />
-                                            <Card.Body>
-                                                <Card.Title>{history.title}</Card.Title>
-                                                <Card.Text>{history.category}</Card.Text>
-                                                <Card.Text>{history.price}</Card.Text>
-                                                <Button variant="primary">Buy it Now!</Button>
-                                            </Card.Body>
-                                        </Card>
-                                    </Carousel.Item>
-                                )
-                            })
-                        }
-                    </Carousel>
-                </Col>
-
-                <Col>
-                <h3>Romance Books</h3>
-                    <Carousel>
-                        {
-                            BooksRomance.map(romance => {
-                                return (
-                                    <Carousel.Item className='d-flex justify-content-center'>
-                                        <Card className='col-12'>
-                                            <Card.Img className='image-card' variant="top" src={romance.img} />
-                                            <Card.Body>
-                                                <Card.Title>{romance.title}</Card.Title>
-                                                <Card.Text>{romance.category}</Card.Text>
-                                                <Card.Text>{romance.price}</Card.Text>
-                                                <Button variant="primary">Buy it Now!</Button>
-                                            </Card.Body>
-                                        </Card>
-                                    </Carousel.Item>
-                                )
-                            })
-                        }
-                    </Carousel>
-                </Col>
-           
-                <Col>
-                <h3>Horror Books</h3>
-                    <Carousel>
-                        {
-                            BooksHorror.map(horror => {
-                                return (
-                                    <Carousel.Item className='d-flex justify-content-center'>
-                                        <Card className='col-12'>
-                                            <Card.Img className='image-card' variant="top" src={horror.img} />
-                                            <Card.Body>
-                                                <Card.Title>{horror.title}</Card.Title>
-                                                <Card.Text>{horror.category}</Card.Text>
-                                                <Card.Text>{horror.price}</Card.Text>
-                                                <Button variant="primary">Buy it Now!</Button>
-                                            </Card.Body>
-                                        </Card>
-                                    </Carousel.Item>
-                                )
-                            })
-                        }
-                    </Carousel>
-                </Col>
-
-                <Col>
-                <h3>Sci-Fi Books</h3>
-                    <Carousel>
-                        {
-                            BooksScifi.map(scifi => {
-                                return (
-                                    <Carousel.Item className='d-flex justify-content-center'>
-                                        <Card className='col-12'>
-                                            <Card.Img className='image-card' variant="top" src={scifi.img} />
-                                            <Card.Body>
-                                                <Card.Title>{scifi.title}</Card.Title>
-                                                <Card.Text>{scifi.category}</Card.Text>
-                                                <Card.Text>{scifi.price}</Card.Text>
-                                                <Button variant="primary">Buy it Now!</Button>
-                                            </Card.Body>
-                                        </Card>
-                                    </Carousel.Item>
-                                )
-                            })
-                        }
-                    </Carousel>
-                </Col>
-            </Row>
-        </Container>
-    )
-}
-
-export default LibreriaBody
+export default LibreriaBody;
