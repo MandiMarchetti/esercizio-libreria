@@ -7,6 +7,8 @@ import Col from 'react-bootstrap/Col'
 import BooksFantasy from '../data/fantasy.json'
 import BooksHistory from '../data/history.json'
 import BooksRomance from '../data/romance.json'
+import BooksHorror from '../data/horror.json'
+import BooksScifi from '../data/scifi.json'
 
 
 
@@ -74,6 +76,52 @@ const LibreriaBody = function(){
                                                 <Card.Title>{romance.title}</Card.Title>
                                                 <Card.Text>{romance.category}</Card.Text>
                                                 <Card.Text>{romance.price}</Card.Text>
+                                                <Button variant="primary">Buy it Now!</Button>
+                                            </Card.Body>
+                                        </Card>
+                                    </Carousel.Item>
+                                )
+                            })
+                        }
+                    </Carousel>
+                </Col>
+           
+                <Col>
+                <h3>Horror Books</h3>
+                    <Carousel>
+                        {
+                            BooksHorror.map(horror => {
+                                return (
+                                    <Carousel.Item className='d-flex justify-content-center'>
+                                        <Card className='col-12'>
+                                            <Card.Img className='image-card' variant="top" src={horror.img} />
+                                            <Card.Body>
+                                                <Card.Title>{horror.title}</Card.Title>
+                                                <Card.Text>{horror.category}</Card.Text>
+                                                <Card.Text>{horror.price}</Card.Text>
+                                                <Button variant="primary">Buy it Now!</Button>
+                                            </Card.Body>
+                                        </Card>
+                                    </Carousel.Item>
+                                )
+                            })
+                        }
+                    </Carousel>
+                </Col>
+
+                <Col>
+                <h3>Sci-Fi Books</h3>
+                    <Carousel>
+                        {
+                            BooksScifi.map(scifi => {
+                                return (
+                                    <Carousel.Item className='d-flex justify-content-center'>
+                                        <Card className='col-12'>
+                                            <Card.Img className='image-card' variant="top" src={scifi.img} />
+                                            <Card.Body>
+                                                <Card.Title>{scifi.title}</Card.Title>
+                                                <Card.Text>{scifi.category}</Card.Text>
+                                                <Card.Text>{scifi.price}</Card.Text>
                                                 <Button variant="primary">Buy it Now!</Button>
                                             </Card.Body>
                                         </Card>
