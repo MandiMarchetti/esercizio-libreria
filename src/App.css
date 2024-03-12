@@ -29,6 +29,5 @@
 }
 
 .image-card{
-  width: 18rem;
   object-fit: cover;
 }

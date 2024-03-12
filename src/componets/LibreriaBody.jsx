@@ -21,8 +21,8 @@ const LibreriaBody = function(){
                         {
                             BooksFantasy.map(fantasy => {
                                 return (
-                                    <Carousel.Item>
-                                        <Card style={{ width: '15rem'}}>
+                                    <Carousel.Item className='d-flex justify-content-center'>
+                                        <Card className='col-12'>
                                             <Card.Img className='image-card' variant="top" src={fantasy.img} />
                                             <Card.Body>
                                                 <Card.Title>{fantasy.title}</Card.Title>
@@ -44,8 +44,8 @@ const LibreriaBody = function(){
                         {
                             BooksHistory.map(history => {
                                 return (
-                                    <Carousel.Item>
-                                        <Card style={{ width: '15rem' }}>
+                                    <Carousel.Item className='d-flex justify-content-center'>
+                                        <Card className='col-12'>
                                             <Card.Img className='image-card' variant="top" src={history.img} />
                                             <Card.Body>
                                                 <Card.Title>{history.title}</Card.Title>
@@ -67,8 +67,8 @@ const LibreriaBody = function(){
                         {
                             BooksRomance.map(romance => {
                                 return (
-                                    <Carousel.Item>
-                                        <Card style={{ width: '15rem' }}>
+                                    <Carousel.Item className='d-flex justify-content-center'>
+                                        <Card className='col-12'>
                                             <Card.Img className='image-card' variant="top" src={romance.img} />
                                             <Card.Body>
                                                 <Card.Title>{romance.title}</Card.Title>
