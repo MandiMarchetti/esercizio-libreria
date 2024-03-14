@@ -1,0 +1,19 @@
+.Book_Card {
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 5px black;
+}
+
+.Book_Card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  border: 1px solid yellowgreen;
+}
+
+.card_body {
+}
+
+.cards_row {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}

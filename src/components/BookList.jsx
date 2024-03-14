@@ -3,11 +3,11 @@ import SingleBook from "./SingleBook";
 
 const BookList = function (props) {
   return (
-    <Container>
-      <Row>
+    <Container fluid>
+      <Row className="cards_row">
         {props.listOfBooks.map((oneBook) => {
           return (
-            <Col lg="3" className="my-2" key={oneBook.asin}>
+            <Col lg="2" className="my-2" key={oneBook.asin}>
               <SingleBook bookDetails={oneBook} />
             </Col>
           );
